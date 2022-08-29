@@ -65,12 +65,14 @@ div ul li:hover{
 
 @media all and (max-width: 765px) {
 
+    justify-content: space-between;
 
-
+    div ul li {
+        display: none;
+    }
 div ul li:last-child{
 
   display: block;
-  margin-left: 1rem;
 
 }
 

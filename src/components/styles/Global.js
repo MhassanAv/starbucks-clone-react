@@ -16,10 +16,12 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     height: 100vh;
     background-color:${({ theme }) => theme.body};
+    max-width: fit-content;
   }
 
   h4{
   color:${({ theme }) => theme.fontColor};
+  font-size: 1.2rem;
   font-weight: 300;
   
   &:hover{

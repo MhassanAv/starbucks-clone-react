@@ -19,7 +19,7 @@ export default function Content({ content }) {
                 transition={{ delay: 1.2 }}
                 exit={{ opacity: 1 }}
               >
-                <h1 style={{ color: item.color, fontSize: index === 0 && '1.5rem' }}>
+                <h1 style={{ color: item.color, fontSize: index === 0 && '1.6rem' }}>
                   {item.header}
                 </h1>
                 {item.main ? (

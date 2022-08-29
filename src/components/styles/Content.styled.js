@@ -6,12 +6,12 @@ display: flex;
 justify-content: center;
 align-items:center;
 flex-direction: column;
-padding:1.7rem;
+padding:1.8rem;
 padding-left: max(calc(15vw - 10rem),0rem);
 padding-right:max(calc(15vw - 10rem),0rem);
 
 h1{
-  font-size: 3.5rem;
+  font-size: 3.6rem;
   font-weight: 800;
   text-align: center;
   padding-left: max(calc(15vw - 10rem),0rem);
