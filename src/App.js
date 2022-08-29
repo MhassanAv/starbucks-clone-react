@@ -18,7 +18,7 @@ function App() {
   useEffect(()=>{
     const delay = setTimeout(()=>{
       setLoading((prev=>!prev))
-    },800);
+    },1000);
     return ()=> clearTimeout(delay);
   },[])
 

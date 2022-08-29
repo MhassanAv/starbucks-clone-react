@@ -38,11 +38,15 @@ div ul{
     align-items: center;
 }
 div ul li svg{
-    width: 50px;
+    position: relative;
+    top: 0.17rem;
+    width: 60px;
+    height: 25px
 }
 
 
 div ul li{
+
     list-style: none;
     margin: 0 0.7rem;
 

@@ -12,9 +12,12 @@ padding: 0.5rem 1.3rem;
 border-radius: 2rem;
 margin: 0 0.5rem;
 cursor: pointer;
+transition: all 200ms ease-in-out;
 
 &:hover{
   background-color: rgba(255,255,255,0.3);
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
 }
 
 ${({black})=>black && css`

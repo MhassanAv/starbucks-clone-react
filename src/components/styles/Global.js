@@ -18,6 +18,16 @@ const GlobalStyle = createGlobalStyle`
     background-color:${({theme})=>theme.body};
   }
 
+  h4{
+  color:${({theme})=>theme.fontColor};
+  font-weight: 300;
+  
+  &:hover{
+    color: ${({theme})=>theme.main};
+    cursor: pointer;
+  }
+}
+
   a{
     text-decoration: none;
   }

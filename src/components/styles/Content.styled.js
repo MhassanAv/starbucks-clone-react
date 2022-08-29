@@ -20,14 +20,6 @@ h1{
 
 }
 
-h4{
-  color:${({theme})=>theme.fontColor};
-  
-  &:hover{
-    color: ${({theme})=>theme.main};
-    cursor: pointer;
-  }
-}
 
 p{
   font-size: 1.5vw;
