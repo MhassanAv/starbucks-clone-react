@@ -13,12 +13,16 @@ border-radius: 2rem;
 margin: 0 0.5rem;
 cursor: pointer;
 
+&:hover{
+  background-color: rgba(255,255,255,0.3);
+}
+
 ${({black})=>black && css`
 background-color:${({theme})=>theme.fontColor}; ;
 color:${({theme})=>theme.nav};
 &:hover{
     opacity:0.8;
-    background-color:rgba(0,0,0,0.8);;
+    background-color: rgba(75,75,75,0.7);
 }
 `}
 
