@@ -17,6 +17,9 @@ background-color: ${({theme})=>theme.nav};
 box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -webkit-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -moz-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
+
+
+
 `
 
 
@@ -59,6 +62,20 @@ div ul li:hover{
     color:${({theme})=>theme.main};
     cursor: pointer;
 }
+
+@media all and (max-width: 765px) {
+
+
+
+div ul li:last-child{
+
+  display: block;
+  margin-left: 1rem;
+
+}
+
+    
+}
 `
 
 export const NavStyledRight = styled.div`
@@ -87,6 +104,24 @@ div{
         fill:${({theme})=>theme.main};
         color: ${({theme})=>theme.main};
     }
+    
+
+}
+
+@media all and (max-width: 765px) {
+
+    flex: 0;
+
+    button{
+        display:none;
+        visibility: hidden;
+    }
+
+    div{
+        display: none;
+        visibility: hidden;
+    }
+
 
 }
 

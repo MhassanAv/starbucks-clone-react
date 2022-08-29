@@ -62,7 +62,6 @@ function App() {
       img:'https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79187.jpg',
       bg:'#faaa5a',
       color:'#1e3932',
-      fontSize:'3.2rem'
     },
     {
       header:'Summer’s brightest new drinks',
@@ -71,7 +70,6 @@ function App() {
       img:'https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-78796.jpg',
       bg:'#fa91aa',
       color:'#1e3932',
-      fontSize:'3.2rem'
     },
     {
       header:'Cold brew for two',
@@ -80,7 +78,6 @@ function App() {
       img:'https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-78943.jpg',
       bg:'#f06464',
       color:'#edebe9',
-      fontSize:'3.2rem'
     }
     
   ];

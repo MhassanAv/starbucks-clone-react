@@ -9,7 +9,7 @@ export default function Content({content}) {
    <ContentContainer>
     {content.map((item,index)=>{
       return(
-      <ContentFlex key={index} style={{backgroundColor:`${item.bg}`,flexDirection:index%2===0? 'row':'row-reverse'}}>
+      <ContentFlex key={index} Flex={index%2===0?'row':'row-reverse'} style={{backgroundColor:`${item.bg}`}}>
         <img src={item.img} alt={item.header}/>
         <div>
         <motion.div
@@ -19,7 +19,7 @@ export default function Content({content}) {
       transition={{ delay: 1.2 }}
       exit={{ opacity: 1 }}
     >
-        <h1 style={{color:item.color,fontSize:item.fontSize}}>
+        <h1 style={{color:item.color ,fontSize:index===0&&'1.5rem'}}>
           {item.header}
         </h1>
         {item.main?(

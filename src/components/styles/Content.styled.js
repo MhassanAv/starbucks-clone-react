@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const ContentContainer = styled.div`
 height: auto;
@@ -11,7 +11,7 @@ padding-left: max(calc(15vw - 10rem),0rem);
 padding-right:max(calc(15vw - 10rem),0rem);
 
 h1{
-  font-size: 1.3vw;
+  font-size: 3.5rem;
   font-weight: 800;
   text-align: center;
   padding-left: max(calc(15vw - 10rem),0rem);
@@ -54,6 +54,39 @@ div {
   margin: 1.5rem;
   margin-left:auto;
   margin-right: auto;
+}
+${({Flex})=>Flex && css`
+flex-direction: ${Flex}; 
+`}
+
+@media all and (max-width: 765px) {
+
+  p{
+    font-size: 1.5rem;
+  }
+
+  h1{
+    font-size: 2.5rem;
+  }
+
+  img{
+  max-width: 100%;
+  object-fit:fill;
+}
+
+div {
+  max-width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1.5rem;
+  margin-left:auto;
+  margin-right: auto;
+}
+  
+  flex-direction: column;
+  
 }
 
 `
