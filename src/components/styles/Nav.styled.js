@@ -14,7 +14,6 @@ display: flex;
 align-items: center;
 justify-content: space-between;
 background-color: ${({theme})=>theme.nav};
-font-feature-settings: "calt";
 box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -webkit-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -moz-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);

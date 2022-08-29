@@ -10,8 +10,11 @@ display: flex;
 align-items: center;
 justify-content: center;
 flex-direction:column;
-position: absolute;
+position: fixed;
 z-index: 100;
+svg{
+  fill: ${({theme})=>theme.fontColor};
+}
 `
 
 export default function Loading() {

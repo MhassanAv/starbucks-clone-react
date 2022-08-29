@@ -1,6 +1,7 @@
 import React from 'react'
 import { Btn } from './styles/Btn.Styled'
 import { ContentContainer,ContentFlex } from './styles/Content.styled'
+import { motion } from 'framer-motion' 
 
 export default function Content({content}) {
   
@@ -11,6 +12,13 @@ export default function Content({content}) {
       <ContentFlex key={index} style={{backgroundColor:`${item.bg}`,flexDirection:index%2===0? 'row':'row-reverse'}}>
         <img src={item.img} alt={item.header}/>
         <div>
+        <motion.div
+      style={{marign:0,maxWidth:'max-content'}}
+      initial={{ opacity: 0, y:-100 }}
+      animate={{ opacity: 1,y:0 }}
+      transition={{ delay: 1.2 }}
+      exit={{ opacity: 1 }}
+    >
         <h1 style={{color:item.color,fontSize:item.fontSize}}>
           {item.header}
         </h1>
@@ -21,14 +29,14 @@ export default function Content({content}) {
         <Btn style={{color:item.color, borderColor:item.color}}>
           {item.buttonText}
         </Btn>
+        </motion.div>
         </div>
-
       </ContentFlex>
       )
     }
     )
   }
-  <h4>StarBucks Clone By Muhammed Hassan</h4>
+  <a href='https://github.com/MhassanAv' target='_blank' rel='noreferrer'><h4>StarBucks Clone By Muhammed Hassan</h4></a>
   </ContentContainer>
   )
 };

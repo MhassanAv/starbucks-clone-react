@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     background-color:${({theme})=>theme.body};
   }
 
+  a{
+    text-decoration: none;
+  }
+
   @keyframes btnFade {
   0%{
     opacity: 0;
@@ -34,6 +38,16 @@ const GlobalStyle = createGlobalStyle`
   100% {
     transform: rotate(360deg);
   }
+}
+
+@media all and (max-width: 500px) {
+
+  font-size: 14rem;
+
+  h1{
+    font-size: 14rem;
+  }
+  
 }
 
 `

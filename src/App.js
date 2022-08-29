@@ -9,7 +9,10 @@ import {motion} from 'framer-motion'
 
 
 function App() {
-  const [darkMode,setDarkMode] = useState(false);
+  //getting previous darkmode status
+  const storedDarkMode = JSON.parse(window.localStorage.getItem("DARK_MODE"));
+
+  const [darkMode,setDarkMode] = useState(storedDarkMode===null?false:storedDarkMode);
   const [loading,setLoading] = useState(true);
 
   useEffect(()=>{
@@ -19,8 +22,15 @@ function App() {
     return ()=> clearTimeout(delay);
   },[])
 
+  // darkmod toggle
   const modeChanger = ()=>setDarkMode((prevMode)=>!prevMode)
 
+  // caching darkMode status with every state update of darkmode
+  useEffect(() => {
+    window.localStorage.setItem("DARK_MODE",JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  //global theme 
   const themes={
     lightmode:{
       nav:  '#fff',
@@ -35,7 +45,7 @@ function App() {
       fontColor:'#edebe9'
     }
   }
-
+  //page content
   const mainContent = [
     {
       header:'Summer is brighter with free treats.*',
@@ -52,7 +62,7 @@ function App() {
       img:'https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79187.jpg',
       bg:'#faaa5a',
       color:'#1e3932',
-      fontSize:'3rem'
+      fontSize:'3.2rem'
     },
     {
       header:'Summer’s brightest new drinks',
@@ -61,7 +71,7 @@ function App() {
       img:'https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-78796.jpg',
       bg:'#fa91aa',
       color:'#1e3932',
-      fontSize:'3rem'
+      fontSize:'3.2rem'
     },
     {
       header:'Cold brew for two',
@@ -70,7 +80,7 @@ function App() {
       img:'https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-78943.jpg',
       bg:'#f06464',
       color:'#edebe9',
-      fontSize:'3rem'
+      fontSize:'3.2rem'
     }
     
   ];
@@ -79,7 +89,7 @@ function App() {
   return (
     <ThemeProvider theme={!darkMode ? themes.lightmode : themes.darkMode}>
       <GlobalStyle/>
-      {loading &&(<Loading />)}
+      {loading &&(<Loading/>)}
       <Nav darkModeHandler ={modeChanger} modeState={darkMode}/>
       <motion.div
       initial={{ opacity: 0, y:-100 }}

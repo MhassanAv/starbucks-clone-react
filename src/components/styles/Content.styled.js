@@ -14,11 +14,19 @@ h1{
   font-size: 1.3vw;
   font-weight: 800;
   text-align: center;
+  padding-left: max(calc(15vw - 10rem),0rem);
+  padding-right: max(calc(15vw - 10rem),0rem);
+  width: 100%;
 
 }
 
 h4{
-  color:${({theme})=>theme.fontColor}
+  color:${({theme})=>theme.fontColor};
+  
+  &:hover{
+    color: ${({theme})=>theme.main};
+    cursor: pointer;
+  }
 }
 
 p{
