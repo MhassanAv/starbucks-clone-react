@@ -13,7 +13,7 @@ letter-spacing:0.0.5rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
-background-color: ${({theme})=>theme.nav};
+background-color: ${({ theme }) => theme.nav};
 box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -webkit-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -moz-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
@@ -29,7 +29,7 @@ flex-direction: row;
 justify-content: flex-start;
 align-items: center;
 flex: 1;
-color:${({theme})=>theme.fontColor};
+color:${({ theme }) => theme.fontColor};
 
 svg{
     width:55px;
@@ -59,7 +59,7 @@ div ul :last-child{
 }
 
 div ul li:hover{
-    color:${({theme})=>theme.main};
+    color:${({ theme }) => theme.main};
     cursor: pointer;
 }
 
@@ -91,8 +91,8 @@ svg{
     
 }
 div{
-    fill: ${({theme})=>theme.fontColor};
-    color:${({theme})=>theme.fontColor};
+    fill: ${({ theme }) => theme.fontColor};
+    color:${({ theme }) => theme.fontColor};
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -101,8 +101,8 @@ div{
     cursor: pointer;
 
     &:hover,:focus{
-        fill:${({theme})=>theme.main};
-        color: ${({theme})=>theme.main};
+        fill:${({ theme }) => theme.main};
+        color: ${({ theme }) => theme.main};
     }
     
 

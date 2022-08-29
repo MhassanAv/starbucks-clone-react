@@ -55,7 +55,7 @@ div {
   margin-left:auto;
   margin-right: auto;
 }
-${({Flex})=>Flex && css`
+${({ Flex }) => Flex && css`
 flex-direction: ${Flex}; 
 `}
 

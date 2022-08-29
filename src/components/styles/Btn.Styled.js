@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import {MdDarkMode,MdLightMode} from "react-icons/md";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 
 
@@ -20,18 +20,18 @@ transition: all 200ms ease-in-out;
   padding-right: 1.4rem;
 }
 
-${({black})=>black && css`
-background-color:${({theme})=>theme.fontColor}; ;
-color:${({theme})=>theme.nav};
+${({ black }) => black && css`
+background-color:${({ theme }) => theme.fontColor}; ;
+color:${({ theme }) => theme.nav};
 &:hover{
     opacity:0.8;
     background-color: rgba(75,75,75,0.7);
 }
 `}
 
-${({white})=>white && css`
-color: ${({theme})=>theme.fontColor};
-border-color:${({theme})=>theme.fontColor};
+${({ white }) => white && css`
+color: ${({ theme }) => theme.fontColor};
+border-color:${({ theme }) => theme.fontColor};
 &:hover{
   background-color: rgba(255,255,255,0.3);
 }
@@ -45,7 +45,7 @@ animation-name:btnFade;
 animation-duration: 1s;
 animation-direction: normal;
 &:hover,:focus{
-  color: ${({theme})=>theme.main}
+  color: ${({ theme }) => theme.main}
 }
 `
 export const LightModeBtn = styled(MdLightMode)`
@@ -54,6 +54,6 @@ animation-name:btnFade;
 animation-duration: 1s;
 animation-direction: normal;
 &:hover,:focus{
-  color: ${({theme})=>theme.main}
+  color: ${({ theme }) => theme.main}
 }
 `

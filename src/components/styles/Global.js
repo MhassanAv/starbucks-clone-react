@@ -15,15 +15,15 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.4rem;
     line-height: 1.5;
     height: 100vh;
-    background-color:${({theme})=>theme.body};
+    background-color:${({ theme }) => theme.body};
   }
 
   h4{
-  color:${({theme})=>theme.fontColor};
+  color:${({ theme }) => theme.fontColor};
   font-weight: 300;
   
   &:hover{
-    color: ${({theme})=>theme.main};
+    color: ${({ theme }) => theme.main};
     cursor: pointer;
   }
 }
