@@ -5,7 +5,6 @@ import styled from 'styled-components'
 const Load = styled.div`
 height: 100%;
 width: 100%;
-max-height: 100vh;
 background-color: ${({theme})=>theme.body};
 display: flex;
 align-items: center;
