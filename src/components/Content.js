@@ -3,7 +3,7 @@ import { Btn } from './styles/Btn.Styled'
 import { ContentContainer,ContentFlex } from './styles/Content.styled'
 
 export default function Content({content}) {
-
+  
   return (
    <ContentContainer>
     {content.map((item,index)=>{
