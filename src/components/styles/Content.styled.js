@@ -11,7 +11,7 @@ padding-left: max(calc(15vw - 10rem),0rem);
 padding-right:max(calc(15vw - 10rem),0rem);
 
 h1{
-  font-size: 3.6rem;
+  font-size: 3.5rem;
   font-weight: 800;
   text-align: center;
   padding-left: max(calc(15vw - 10rem),0rem);
@@ -25,7 +25,7 @@ p{
   font-size: 1.5vw;
   font-weight: 500;
   text-align: center;
-  padding:max(calc(10vw - 10rem),0rem);
+  padding:max(calc(10vw - 10rem),2rem);
 }
 
 `
@@ -36,14 +36,13 @@ align-items: center;
 justify-content: center;
 
 button{
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
 
 img{
   max-width: 50%;
-  min-width: 50%;
-  object-fit:contain;
+  object-fit:cover;
 }
 div {
   max-width: 50%;
@@ -51,7 +50,7 @@ div {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  margin: 1.5rem;
+  margin: 1.2rem;
   margin-left:auto;
   margin-right: auto;
 }
