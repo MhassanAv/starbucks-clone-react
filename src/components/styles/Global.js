@@ -52,15 +52,5 @@ const GlobalStyle = createGlobalStyle`
   }
 }
 
-@media all and (max-width: 500px) {
-
-  font-size: 14rem;
-
-  h1{
-    font-size: 14rem;
-  }
-  
-}
-
 `
 export default GlobalStyle;

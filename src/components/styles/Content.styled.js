@@ -14,8 +14,8 @@ h1{
   font-size: 3.5rem;
   font-weight: 800;
   text-align: center;
-  padding-left: max(calc(15vw - 10rem),0rem);
-  padding-right: max(calc(15vw - 10rem),0rem);
+  padding-left: max(calc(15vw - 10rem),1rem);
+  padding-right: max(calc(15vw - 10rem),1rem);
   width: 100%;
 
 }
@@ -62,15 +62,19 @@ flex-direction: ${Flex};
 
   p{
     font-size: 1.5rem;
+    margin:0;
   }
 
   h1{
     font-size: 2.5rem;
+    width: 23rem;
   }
 
   img{
+  position: relative;
+  top:0rem;
   max-width: 100%;
-  object-fit:fill;
+  object-fit:cover;
 }
 
 div {
