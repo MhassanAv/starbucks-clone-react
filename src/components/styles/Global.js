@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components";
 
-
 const GlobalStyle = createGlobalStyle`
 
 
@@ -9,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
   }
+  
   body {
     margin: 0;
     padding: 0;
@@ -16,8 +16,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.4rem;
     line-height: 1.5;
     height: 100vh;
-    overflow-x: hidden;
     background-color:${({ theme }) => theme.body};
+    overflow-x: hidden;
     width: 100%;
     max-width: fit-content;
   }
@@ -55,5 +55,5 @@ const GlobalStyle = createGlobalStyle`
   }
 }
 
-`
+`;
 export default GlobalStyle;

@@ -1,50 +1,40 @@
 import styled from "styled-components";
-import {motion} from 'framer-motion'
-import { MdMenu, MdClose } from 'react-icons/md'
+import { motion } from "framer-motion";
+import { MdMenu, MdClose } from "react-icons/md";
 
 export const MenuBtn = styled(MdMenu)`
-
-display: none;
-
-@media all and (max-width: 768px){
-
-    display: block;
-}
-
-
-
-`
-
-export const CloseBtn = styled(MdClose)`
-
-display: none;
-
-@media all and (max-width: 768px){
-
-    display: block;
- 
-}
-
-`
-
-export const SideBarStyled = styled(motion.div)`
   display: none;
-  position: absolute;
-  right: 0;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-  font-size: 1.2rem;
-  z-index: 1;
-  color: ${({ theme }) => theme.fontColor};
-  background-color: ${({ theme }) => theme.body};
-  font-weight: 600;
-
 
   @media all and (max-width: 768px) {
     display: block;
-    width: 70vw;
+  }
+`;
 
+export const CloseBtn = styled(MdClose)`
+  display: none;
+
+  @media all and (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const SideBarStyled = styled(motion.div)`
+  position: absolute;
+  right: 0;
+  display: none;
+  height: 100vh;
+  width: 70vw;
+  max-width: 70vw;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  z-index: 1;
+  color: ${({ theme }) => theme.fontColor};
+  background-color: ${({ theme }) => theme.sideBar};
+  font-weight: 600;
+
+  @media all and (max-width: 768px) {
+    display: block;
 
     svg {
       height: 1.3rem;
@@ -57,11 +47,11 @@ export const SideBarStyled = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-left: 2.5rem;
+      margin-left: 1.5rem;
       margin-bottom: 0rem;
       margin-top: 1rem;
-      cursor: pointer;
     }
+
     ul {
       list-style: none;
       padding: 0;
@@ -69,8 +59,9 @@ export const SideBarStyled = styled(motion.div)`
     ul li {
       margin-top: 2rem;
       margin-bottom: 2rem;
-      cursor: pointer;
     }
-
+    div button {
+      font-size: 0.7rem;
+    }
   }
 `;
