@@ -1,10 +1,24 @@
-import React from 'react'
-import { NavStyledLeft, NavStyledRight, Container } from './styles/Nav.styled'
+import React,{useState, useEffect} from 'react'
+import { NavStyledLeft, NavStyledRight, Container } from './styles/Nav.Styled'
 import { Btn, DarkModeBtn, LightModeBtn } from './styles/Btn.Styled'
+import { MdMenu,MdClose } from 'react-icons/md'
 
 
 export default function Nav({ darkModeHandler, modeState }) {
 
+
+  const [menuState,setMenuState] = useState(false);
+
+  const [width,setWidth] = useState(window.innerWidth);
+
+  const menuHandler = ()=> setMenuState(prev=>!prev);
+
+  useEffect(() =>{
+    window.addEventListener('resize',()=>setWidth(()=>window.innerWidth));
+
+    return ()=>window.removeEventListener('resize',()=>setWidth(()=>window.innerWidth));
+
+  },[width])
 
 
   return (
@@ -19,6 +33,7 @@ export default function Nav({ darkModeHandler, modeState }) {
             {!modeState ?
               (<li><DarkModeBtn onClick={darkModeHandler} /></li>)
               : (<li><LightModeBtn onClick={darkModeHandler} /></li>)}
+              {width <=765 && (menuState?<li><MdMenu onClick={menuHandler} /></li>:<li><MdClose onClick={menuHandler}/></li>)}
           </ul>
         </div>
       </NavStyledLeft>
