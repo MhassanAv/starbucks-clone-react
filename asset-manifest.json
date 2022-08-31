@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/starbucks-clone-react/static/js/main.a17b9f66.js",
+    "main.js": "/starbucks-clone-react/static/js/main.d3fd4594.js",
     "index.html": "/starbucks-clone-react/index.html",
-    "main.a17b9f66.js.map": "/starbucks-clone-react/static/js/main.a17b9f66.js.map"
+    "main.d3fd4594.js.map": "/starbucks-clone-react/static/js/main.d3fd4594.js.map"
   },
   "entrypoints": [
-    "static/js/main.a17b9f66.js"
+    "static/js/main.d3fd4594.js"
   ]
 }
