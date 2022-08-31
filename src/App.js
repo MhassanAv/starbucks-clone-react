@@ -4,17 +4,26 @@ import Nav from './components/Nav';
 import GlobalStyle from './components/styles/Global';
 import Content from './components/Content';
 import Loading from './components/Loading';
+import SideBar from './components/SideBar';
 import { motion } from 'framer-motion'
 
 
 
 function App() {
-  //getting previous darkmode status
+  //Getting previous darkmode status
   const storedDarkMode = JSON.parse(window.localStorage.getItem("DARK_MODE"));
 
   const [darkMode, setDarkMode] = useState(storedDarkMode === null ? false : storedDarkMode);
   const [loading, setLoading] = useState(true);
+  const [menuState, setMenuState] = useState(false);
 
+  // Darkmod toggle
+  const modeChanger = () => setDarkMode((prevMode) => !prevMode)
+
+  // Side Menu Hanndler
+  const menuHandler = () => setMenuState(prev => !prev);
+
+  // Loading Screen
   useEffect(() => {
     const delay = setTimeout(() => {
       setLoading((prev => !prev))
@@ -22,13 +31,11 @@ function App() {
     return () => clearTimeout(delay);
   }, [])
 
-  // darkmod toggle
-  const modeChanger = () => setDarkMode((prevMode) => !prevMode)
-
-  // caching darkMode status with every state update of darkmode
+  // Caching darkMode status with every state update of darkmode
   useEffect(() => {
     window.localStorage.setItem("DARK_MODE", JSON.stringify(darkMode));
   }, [darkMode]);
+
 
   //global theme 
   const themes = {
@@ -87,7 +94,8 @@ function App() {
     <ThemeProvider theme={!darkMode ? themes.lightmode : themes.darkMode}>
       <GlobalStyle />
       {loading && (<Loading />)}
-      <Nav darkModeHandler={modeChanger} modeState={darkMode} />
+      <Nav darkModeHandler={modeChanger} modeState={darkMode} MenuHandler={menuHandler} MenuState={menuState} />
+      {menuState && (<SideBar darkModeHandler={modeChanger} modeState={darkMode} />)}
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}

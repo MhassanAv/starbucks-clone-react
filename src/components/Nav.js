@@ -1,25 +1,10 @@
-import React,{useState, useEffect} from 'react'
+import React from 'react'
 import { NavStyledLeft, NavStyledRight, Container } from './styles/Nav.Styled'
 import { Btn, DarkModeBtn, LightModeBtn } from './styles/Btn.Styled'
-import { MdMenu,MdClose } from 'react-icons/md'
+import { MenuBtn, CloseBtn } from './styles/SideMenu.Styled'
 
 
-export default function Nav({ darkModeHandler, modeState }) {
-
-
-  const [menuState,setMenuState] = useState(false);
-
-  const [width,setWidth] = useState(window.innerWidth);
-
-  const menuHandler = ()=> setMenuState(prev=>!prev);
-
-  useEffect(() =>{
-    window.addEventListener('resize',()=>setWidth(()=>window.innerWidth));
-
-    return ()=>window.removeEventListener('resize',()=>setWidth(()=>window.innerWidth));
-
-  },[width])
-
+export default function Nav({ darkModeHandler, modeState, MenuHandler, MenuState }) {
 
   return (
     <Container>
@@ -33,7 +18,7 @@ export default function Nav({ darkModeHandler, modeState }) {
             {!modeState ?
               (<li><DarkModeBtn onClick={darkModeHandler} /></li>)
               : (<li><LightModeBtn onClick={darkModeHandler} /></li>)}
-              {width <=765 && (menuState?<li><MdMenu onClick={menuHandler} /></li>:<li><MdClose onClick={menuHandler}/></li>)}
+            {!MenuState ? (<li><MenuBtn onClick={MenuHandler} /></li>) : (<li><CloseBtn onClick={MenuHandler} /></li>)}
           </ul>
         </div>
       </NavStyledLeft>

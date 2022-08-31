@@ -58,7 +58,7 @@ ${({ Flex }) => Flex && css`
 flex-direction: ${Flex}; 
 `}
 
-@media all and (max-width: 765px) {
+@media all and (max-width: 768px) {
 
   p{
     font-size: 1.5rem;

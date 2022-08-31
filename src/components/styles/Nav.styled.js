@@ -13,11 +13,12 @@ letter-spacing:0.0.5rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
+z-index: 10;
+position: relative;
 background-color: ${({ theme }) => theme.nav};
 box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -webkit-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
 -moz-box-shadow: 1px 7px 0px -5px rgba(0,0,0,0.06);
-
 
 
 `
@@ -63,7 +64,7 @@ div ul li:hover{
     cursor: pointer;
 }
 
-@media all and (max-width: 765px) {
+@media all and (max-width: 768px) {
 
     justify-content: space-between;
 
@@ -110,7 +111,7 @@ div{
 
 }
 
-@media all and (max-width: 765px) {
+@media all and (max-width: 768px) {
 
     flex: 0;
 

@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
   *,::before,::after {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
   }
   body {
     margin: 0;
@@ -16,6 +17,7 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     height: 100vh;
     background-color:${({ theme }) => theme.body};
+    width: 100%;
     max-width: fit-content;
   }
 

@@ -40,7 +40,7 @@ border-color:${({ theme }) => theme.fontColor};
 export const DarkModeBtn = styled(MdDarkMode)`
 height: 1.4rem;
 animation-name:btnFade;
-animation-duration: 1s;
+animation-duration: 500ms;
 animation-direction: normal;
 &:hover,:focus{
   color: ${({ theme }) => theme.main}
@@ -49,7 +49,7 @@ animation-direction: normal;
 export const LightModeBtn = styled(MdLightMode)`
 height: 1.4rem;
 animation-name:btnFade;
-animation-duration: 1s;
+animation-duration: 500ms;
 animation-direction: normal;
 &:hover,:focus{
   color: ${({ theme }) => theme.main}
