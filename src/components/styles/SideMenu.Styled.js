@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import {motion} from 'framer-motion'
 import { MdMenu, MdClose } from 'react-icons/md'
 
 export const MenuBtn = styled(MdMenu)`
@@ -57,8 +57,9 @@ export const SideBarStyled = styled(motion.div)`
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      margin-left: 3rem;
-      margin-bottom: 2rem;
+      margin-left: 2.5rem;
+      margin-bottom: 0rem;
+      margin-top: 1rem;
       cursor: pointer;
     }
     ul {
@@ -66,7 +67,8 @@ export const SideBarStyled = styled(motion.div)`
       padding: 0;
     }
     ul li {
-      margin-top: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
       cursor: pointer;
     }
 

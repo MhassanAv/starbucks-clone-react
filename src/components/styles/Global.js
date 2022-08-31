@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 1.4rem;
     line-height: 1.5;
     height: 100vh;
+    overflow-x: hidden;
     background-color:${({ theme }) => theme.body};
     width: 100%;
     max-width: fit-content;
