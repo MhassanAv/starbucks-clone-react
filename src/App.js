@@ -21,7 +21,12 @@ function App() {
   const modeChanger = () => setDarkMode((prevMode) => !prevMode);
 
   // Side Menu Hanndler
-  const menuHandler = () => setMenuState((prev) => !prev);
+  const menuHandler = () => {
+    setMenuState((prev) => !prev);
+    !menuState
+      ? (document.body.style = "hidden")
+      : (document.body.style.overflow = "scroll");
+  };
 
   // Loading Screen
   useEffect(() => {

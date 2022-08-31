@@ -5,10 +5,10 @@ import { SideBarStyled } from "./styles/SideMenu.Styled";
 export default function SideBar({ modeState, darkModeHandler }) {
   return (
     <SideBarStyled
-      initial={{ x: 0 }}
-      animate={{ x: 30 }}
-      transition={{ delay: 0 }}
-      exit={{ x: 0 }}
+      initial={{ transform: "translateX(70vw)" }}
+      animate={{ transform: "translateX(10vw)" }}
+      transition={{ delay: 0, duration: 0.5 }}
+      exit={{ transform: "translateX(0)" }}
     >
       <div>
         <ul>

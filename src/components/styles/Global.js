@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   }
   
   body {
+    position: relative;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -18,7 +19,6 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     height: 100vh;
     background-color:${({ theme }) => theme.body};
-    overflow-x: hidden;
     width: 100%;
     max-width: fit-content;
   }

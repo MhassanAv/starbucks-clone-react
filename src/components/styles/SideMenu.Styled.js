@@ -19,7 +19,7 @@ export const CloseBtn = styled(MdClose)`
 `;
 
 export const SideBarStyled = styled(motion.div)`
-  position: absolute;
+  position: fixed;
   right: 0;
   display: none;
   height: 100vh;
@@ -32,9 +32,6 @@ export const SideBarStyled = styled(motion.div)`
   color: ${({ theme }) => theme.fontColor};
   background-color: ${({ theme }) => theme.sideBar};
   font-weight: 600;
-  box-shadow: -50vw 0px 0px rgba(0,0,0,0.32);
--webkit-box-shadow: -50vw 0px 0px 0px rgba(0,0,0,0.32);
--moz-box-shadow: -50vw 0px 0px 0px rgba(0,0,0,0.32);
 
   @media all and (max-width: 768px) {
     display: block;
