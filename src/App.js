@@ -35,8 +35,8 @@ function App() {
   // Locking scroll when sidebar is opened
   useEffect(() => {
     menuState
-      ? (document.body.style.overflow = "hidden")
-      : (document.body.style.overflow = "scroll");
+      ? (document.body.style.cssText=`overflow: hidden;}`)
+      : (document.body.style.cssText=`overflow: scroll;`);
   }, [menuState]);
   // Caching darkMode status with every state update of darkmode
   useEffect(() => {
@@ -106,9 +106,7 @@ function App() {
         MenuHandler={menuHandler}
         MenuState={menuState}
       />
-      {menuState && (
-        <SideBar darkModeHandler={modeChanger} modeState={darkMode} />
-      )}
+      <SideBar darkModeHandler={modeChanger} modeState={darkMode} MenuState={menuState} />
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}

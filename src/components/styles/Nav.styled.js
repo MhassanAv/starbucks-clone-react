@@ -14,11 +14,14 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 10;
+  z-index: 20;
   background-color: ${({ theme }) => theme.nav};
-  box-shadow: 1px 7px 0px -5px rgba(0, 0, 0, 0.06);
-  -webkit-box-shadow: 1px 7px 0px -5px rgba(0, 0, 0, 0.06);
-  -moz-box-shadow: 1px 7px 0px -5px rgba(0, 0, 0, 0.06);
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+-webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+  @media all and (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 export const NavStyledLeft = styled.div`
@@ -67,6 +70,10 @@ export const NavStyledLeft = styled.div`
     div ul li:last-child {
       display: block;
     }
+
+    svg {
+      width: 3rem;
+    }
   }
 `;
 
@@ -99,7 +106,6 @@ export const NavStyledRight = styled.div`
 
   @media all and (max-width: 768px) {
     flex: 0;
-
     button {
       display: none;
       visibility: hidden;

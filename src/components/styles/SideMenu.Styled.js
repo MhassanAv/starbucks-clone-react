@@ -23,8 +23,8 @@ export const SideBarStyled = styled(motion.div)`
   right: 0;
   display: none;
   height: 100vh;
-  width: 70vw;
-  max-width: 70vw;
+  width: 80vw;
+  max-width: 80vw;
   margin: 0;
   padding: 0;
   font-size: 1rem;
@@ -36,7 +36,7 @@ export const SideBarStyled = styled(motion.div)`
   @media all and (max-width: 768px) {
     display: block;
     svg {
-      height: 1.3rem;
+      height: 1.4rem;
       fill: ${({ theme }) => theme.fontColor};
       margin-right: 0.5rem;
       margin-left: 0.5rem;
@@ -56,8 +56,12 @@ export const SideBarStyled = styled(motion.div)`
       padding: 0;
     }
     ul li {
+      font-size: 1.2rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
+    }
+    ul li svg  {
+      transform: scale(1.5);
     }
     div button {
       font-size: 0.7rem;

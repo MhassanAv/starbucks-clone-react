@@ -1,14 +1,16 @@
 import React from "react";
+import { AnimatePresence } from 'framer-motion'
 import { DarkModeBtn, LightModeBtn, Btn } from "./styles/Btn.Styled";
 import { SideBarStyled } from "./styles/SideMenu.Styled";
 
-export default function SideBar({ modeState, darkModeHandler }) {
+export default function SideBar({ modeState, darkModeHandler, MenuState }) {
   return (
-    <SideBarStyled
-      initial={{ transform: "translateX(70vw)" }}
-      animate={{ transform: "translateX(10vw)" }}
-      transition={{ delay: 0, duration: 0.5 }}
-      exit={{ transform: "translateX(0)" }}
+   <AnimatePresence>
+    {MenuState &&<SideBarStyled
+      initial={{ transform: 'translateX(100vw)' }}
+      animate={{ transform: 'translateX(0vw)' }}
+      transition={{ delay: 0, duration: 0.5}}
+      exit={{ transform: 'translateX(100vw)'}}
     >
       <div>
         <ul>
@@ -47,6 +49,7 @@ export default function SideBar({ modeState, darkModeHandler }) {
         </svg>
         Find a store
       </div>
-    </SideBarStyled>
+    </SideBarStyled>}
+    </AnimatePresence>
   );
 }

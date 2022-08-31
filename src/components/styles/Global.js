@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     max-width: fit-content;
   }
 
+
   h4{
   color:${({ theme }) => theme.fontColor};
   font-size: 1.2rem;
