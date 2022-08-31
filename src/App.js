@@ -23,9 +23,6 @@ function App() {
   // Side Menu Hanndler
   const menuHandler = () => {
     setMenuState((prev) => !prev);
-    !menuState
-      ? (document.body.style = "hidden")
-      : (document.body.style.overflow = "scroll");
   };
 
   // Loading Screen
@@ -35,7 +32,12 @@ function App() {
     }, 1000);
     return () => clearTimeout(delay);
   }, []);
-
+  // Locking scroll when sidebar is opened
+  useEffect(() => {
+    menuState
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "scroll");
+  }, [menuState]);
   // Caching darkMode status with every state update of darkmode
   useEffect(() => {
     window.localStorage.setItem("DARK_MODE", JSON.stringify(darkMode));
