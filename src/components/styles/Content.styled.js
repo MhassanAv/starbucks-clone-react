@@ -24,6 +24,7 @@ export const ContentContainer = styled.div`
     font-weight: 500;
     text-align: center;
     padding: max(calc(10vw - 10rem), 2rem);
+    width: 90%;
   }
 `;
 export const ContentFlex = styled.div`
@@ -37,6 +38,7 @@ export const ContentFlex = styled.div`
   }
 
   img {
+    display: block;
     max-width: 50%;
     object-fit: cover;
   }

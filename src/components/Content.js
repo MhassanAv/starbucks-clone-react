@@ -30,9 +30,9 @@ export default function Content({ content }) {
                 >
                   {item.header}
                 </h1>
-                {item.main ? (
+                {item.main && (
                   <p style={{ color: item.color }}>{item.main}</p>
-                ) : null}
+                )}
                 <Btn style={{ color: item.color, borderColor: item.color }}>
                   {item.buttonText}
                 </Btn>

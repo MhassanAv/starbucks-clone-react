@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import Nav from "./components/Nav";
@@ -96,6 +97,49 @@ function App() {
     },
   ];
 
+  const mainContent2 = [
+    {
+      header: "Fall at your fingertips",
+      main: "Ordering your fall favorites is a snap with the app. Join Starbucks® Rewards and tap into fall.",
+      buttonText: "Join now",
+      img: "https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79280.jpg",
+      bg: "#d4e9e2",
+      color: "#1e3932",
+    },
+    {
+      header: "Welcome home, pumpkin",
+      main: "Fall favorites return with the blissful Pumpkin Spice Latte and smooth Pumpkin Cream Cold Brew.",
+      buttonText: "Learn more",
+      img: "https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79281.jpg",
+      bg: "#006241",
+      color: "#ffffff",
+    },
+    {
+      header: "Layers of baked apple yum",
+      main: "Try the Apple Crisp Oatmilk Macchiato, now nondairy and with Starbucks® Blonde Espresso.",
+      buttonText: "Learn more",
+      img: "https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79282.jpg",
+      bg: "#006241",
+      color: "#ffffff",
+    },
+    {
+      header: "Picks of the patch",
+      main: "Choose a comforting classic: Pumpkin Cream Cheese Muffin, Pumpkin & Pepita Loaf or Pumpkin Scone.",
+      buttonText: "Learn more",
+      img: "https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79283.jpg",
+      bg: "#006241",
+      color: "#ffffff",
+    },
+    {
+      header: "The art of the roast",
+      main: "With a new roast spectrum front and center on our coffee bags, it’s easier than ever to find a taste you love.",
+      buttonText: "Order now",
+      img: "https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79284.jpg",
+      bg: "#006241",
+      color: "#ffffff",
+    }
+  ];
+
   return (
     <ThemeProvider theme={!darkMode ? themes.lightmode : themes.darkMode}>
       <GlobalStyle />
@@ -113,7 +157,7 @@ function App() {
         transition={{ delay: 1 }}
         exit={{ opacity: 1 }}
       >
-        <Content content={mainContent} />
+        <Content content={mainContent2} />
       </motion.div>
     </ThemeProvider>
   );

@@ -17,8 +17,8 @@ export const Container = styled.nav`
   z-index: 20;
   background-color: ${({ theme }) => theme.nav};
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
--webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
--moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
   @media all and (max-width: 768px) {
     padding: 1rem;
   }
@@ -43,9 +43,9 @@ export const NavStyledLeft = styled.div`
   }
   div ul li svg {
     position: relative;
-    top: 0.17rem;
-    width: 60px;
-    height: 25px;
+    top: 0.15rem;
+    width: 20px;
+    height: 20px;
   }
 
   div ul li {
@@ -94,6 +94,7 @@ export const NavStyledRight = styled.div`
     justify-content: space-between;
     text-align: center;
     align-items: center;
+    letter-spacing: 0rem;
     margin-right: 1.4rem;
     cursor: pointer;
 
