@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.nav`
   position: relative;
-  padding: 1.7rem;
+  padding: 1.6rem;
   padding-left: max(calc(15vw - 10rem), 2rem);
   padding-right: max(calc(15vw - 10rem), 2rem);
   font-size: 17px;
@@ -19,9 +19,14 @@ export const Container = styled.nav`
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
   -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+
   @media all and (max-width: 768px) {
-    padding: 1rem;
+
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
   }
+
 `;
 
 export const NavStyledLeft = styled.div`
@@ -69,6 +74,12 @@ export const NavStyledLeft = styled.div`
     }
     div ul li:last-child {
       display: block;
+    }
+
+    div ul li:last-child svg {
+      display: block;
+      width: 2rem;
+      height: 2rem;
     }
 
     svg {

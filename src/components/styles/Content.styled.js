@@ -20,7 +20,7 @@ export const ContentContainer = styled.div`
   }
 
   p {
-    font-size: 1.5vw;
+    font-size: 1.4vw;
     font-weight: 500;
     text-align: center;
     padding: max(calc(10vw - 10rem), 2rem);
@@ -52,6 +52,8 @@ export const ContentFlex = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
+
+
   ${({ Flex }) =>
     Flex &&
     css`
@@ -65,7 +67,7 @@ export const ContentFlex = styled.div`
     }
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2rem;
       width: 23rem;
     }
 
