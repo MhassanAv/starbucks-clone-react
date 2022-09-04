@@ -8,6 +8,7 @@ export const ContentContainer = styled.main`
   align-items: center;
   flex-direction: column;
   padding: 1.8rem;
+  z-index: 50;
   padding-left: max(calc(15vw - 10rem), 0rem);
   padding-right: max(calc(15vw - 10rem), 0rem);
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);

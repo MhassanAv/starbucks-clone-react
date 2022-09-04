@@ -20,6 +20,7 @@ const Load = styled.div`
 export default function Loading() {
   return (
     <Load>
+      <h4>Welcome to Starbucks</h4>
       <svg
         focusable="false"
         height="10%"

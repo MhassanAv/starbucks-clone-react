@@ -12,6 +12,7 @@ max-width: auto;
 background-color: transparent;
 color:${({ theme }) => theme.fontColor};
 transition: all 0.5 ease-in-out;
+z-index:1;
 
 h3 {
     position: relative;
@@ -19,14 +20,16 @@ h3 {
     text-align: left;
     font-size: 1.4rem;
     font-weight: 500;
-    z-index:50;
+    z-index:1;
 }
 ul {
+    position: relative;
     display: block;
     text-align: left;
     list-style: none;
     margin:0;
     padding: 0;
+    z-index:5;
 }
 ul li {
     font-size:1.1rem;
@@ -59,11 +62,9 @@ svg{
         margin-right:1rem;
     }
     ul{
-        position: relative;
         width: 100%;
         display: flex;
         flex-direction: column;
-        z-index: -100;
         transition: all 300ms ease-in-out;
         top:-15rem;
         max-height:0;
@@ -71,14 +72,11 @@ svg{
         visibility: hidden;
     }
     h3 {
-    height:2rem;
-    position: relative;
     text-align: left;
     font-size: 1.2rem;
     font-weight: 500;
     margin: 1rem 0rem;
     width: 90%;
-    z-index:20;
     background-color: ${({ theme }) => theme.body};
 }
 ul li {
@@ -88,7 +86,6 @@ ul li {
 ${({state})=>state && css`
 
 ul {
-    position: relative;
     opacity: 1;
     transform-origin: top;
     top:0rem;

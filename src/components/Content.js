@@ -3,7 +3,7 @@ import { Btn } from "./styles/Btn.Styled";
 import { ContentContainer, ContentFlex } from "./styles/Content.Styled";
 import { motion } from "framer-motion";
 
-export default function Content({ content }) {
+export default function Content({ content,loadingState }) {
   return (
     <ContentContainer>
       {content.map((item, index) => {
@@ -19,7 +19,7 @@ export default function Content({ content }) {
                 style={{ marign: 0, maxWidth: "max-content" }}
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1.2 }}
+                transition={{ delay: !loadingState? 0:0.8 , duration:0.3 }}
                 exit={{ opacity: 1 }}
               >
                 <h1

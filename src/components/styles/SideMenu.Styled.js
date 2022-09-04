@@ -28,7 +28,7 @@ export const SideBarStyled = styled(motion.div)`
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  z-index: 1;
+  z-index: 70;
   color: ${({ theme }) => theme.fontColor};
   background-color: ${({ theme }) => theme.sideBar};
   font-weight: 600;
