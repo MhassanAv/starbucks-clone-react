@@ -11,7 +11,7 @@ const Load = styled.div`
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  z-index: 100;
+  z-index: 200;
   svg {
     fill: ${({ theme }) => theme.fontColor};
   }

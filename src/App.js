@@ -1,11 +1,13 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
+import {Route,Routes} from 'react-router-dom'
 import Nav from "./components/Nav";
 import GlobalStyle from "./components/styles/Global";
 import Content from "./components/Content";
 import Loading from "./components/Loading";
 import SideBar from "./components/SideBar";
+import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 
 function App() {
@@ -28,18 +30,22 @@ function App() {
 
   // Loading Screen
   useEffect(() => {
+
     const delay = setTimeout(() => {
       setLoading((prev) => !prev);
-    }, 1000);
+    }, 800);
     return () => clearTimeout(delay);
   }, []);
   // Locking scroll when sidebar is opened
+
   useEffect(() => {
     menuState
       ? (document.body.style.cssText=`overflow: hidden;}`)
       : (document.body.style.cssText=`overflow: scroll;`);
   }, [menuState]);
+
   // Caching darkMode status with every state update of darkmode
+
   useEffect(() => {
     window.localStorage.setItem("DARK_MODE", JSON.stringify(darkMode));
   }, [darkMode]);
@@ -157,7 +163,11 @@ function App() {
         transition={{ delay: 1 }}
         exit={{ opacity: 1 }}
       >
-        <Content content={mainContent2} />
+        <Routes>
+        <Route path="/starbucks-clone-react" element={<Content content={mainContent2}/>} />
+        <Route path="/starbucks-clone-react/menu" element={<h1>Menu</h1>}/>
+        </Routes>
+        <Footer/>
       </motion.div>
     </ThemeProvider>
   );

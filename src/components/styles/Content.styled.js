@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
-export const ContentContainer = styled.div`
+export const ContentContainer = styled.main`
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -9,6 +10,9 @@ export const ContentContainer = styled.div`
   padding: 1.8rem;
   padding-left: max(calc(15vw - 10rem), 0rem);
   padding-right: max(calc(15vw - 10rem), 0rem);
+  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
 
   h1 {
     font-size: 3.5rem;

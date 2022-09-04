@@ -2,6 +2,7 @@ import React from "react";
 import { AnimatePresence } from 'framer-motion'
 import { DarkModeBtn, LightModeBtn, Btn } from "./styles/Btn.Styled";
 import { SideBarStyled } from "./styles/SideMenu.Styled";
+import {Link} from 'react-router-dom';
 
 export default function SideBar({ modeState, darkModeHandler, MenuState }) {
   return (
@@ -9,12 +10,12 @@ export default function SideBar({ modeState, darkModeHandler, MenuState }) {
     {MenuState &&<SideBarStyled
       initial={{ transform: 'translateX(100vw)' }}
       animate={{ transform: 'translateX(0vw)' }}
-      transition={{ delay: 0, duration: 0.5}}
+      transition={{ delay: 0, duration: 0.3}}
       exit={{ transform: 'translateX(100vw)'}}
     >
       <div>
         <ul>
-          <li>MENU</li>
+          <li><li><Link to="/starbucks-clone-react/menu">MENU</Link></li></li>
           <li>REWARDS</li>
           <li>GIFT CARDS</li>
           {!modeState ? (

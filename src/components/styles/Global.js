@@ -6,12 +6,12 @@ const GlobalStyle = createGlobalStyle`
   *,::before,::after {
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
-    scroll-behavior: smooth;
     font-size: 14px;
   }
   
   body {
     position: relative;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     font-weight: 400;
@@ -20,7 +20,8 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     background-color:${({ theme }) => theme.body};
     width: 100%;
-    max-width: fit-content;
+    overflow-x: hidden;
+    max-width: auto;
   }
 
 

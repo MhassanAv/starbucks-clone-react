@@ -41,9 +41,9 @@ export default function Content({ content }) {
           </ContentFlex>
         );
       })}
-      <a href="https://github.com/MhassanAv" target="_blank" rel="noreferrer">
-        <h4>StarBucks Clone By Muhammed Hassan</h4>
-      </a>
+      {/*<a href="https://github.com/MhassanAv" target="_blank" rel="noreferrer">
+        <h4>Starbucks Clone By Muhammed Hassan</h4>
+    </a>*/}
     </ContentContainer>
   );
 }

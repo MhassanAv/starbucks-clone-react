@@ -14,11 +14,12 @@ export const Container = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 20;
+  z-index: 100;
   background-color: ${({ theme }) => theme.nav};
   box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
   -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+
 
   @media all and (max-width: 768px) {
 
@@ -53,6 +54,12 @@ export const NavStyledLeft = styled.div`
     height: 20px;
   }
 
+  a{
+    color: ${({ theme }) => theme.fontColor};
+    &:hover{
+      color: ${({ theme }) => theme.main};
+    }
+  }
   div ul li {
     list-style: none;
     margin: 0 0.7rem;

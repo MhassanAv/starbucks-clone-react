@@ -43,6 +43,7 @@ export const SideBarStyled = styled(motion.div)`
     }
 
     div {
+      font-size: 1.2rem;
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -59,12 +60,17 @@ export const SideBarStyled = styled(motion.div)`
       font-size: 1.2rem;
       margin-top: 2rem;
       margin-bottom: 2rem;
+
+      a{
+        font-size: 1.2rem;
+        color: ${({ theme }) => theme.fontColor};
+      }
     }
     ul li svg  {
       transform: scale(1.5);
     }
     div button {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
     }
   }
 `;

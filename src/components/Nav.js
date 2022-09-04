@@ -2,6 +2,7 @@ import React from "react";
 import { NavStyledLeft, NavStyledRight, Container } from "./styles/Nav.Styled";
 import { Btn, DarkModeBtn, LightModeBtn } from "./styles/Btn.Styled";
 import { MenuBtn, CloseBtn } from "./styles/SideMenu.Styled";
+import { Link } from 'react-router-dom'
 
 export default function Nav({
   darkModeHandler,
@@ -12,6 +13,7 @@ export default function Nav({
   return (
     <Container>
       <NavStyledLeft>
+      <Link to="/starbucks-clone-react">
         <svg
           focusable="false"
           height="100%"
@@ -28,9 +30,10 @@ export default function Nav({
             <path d="M53.595 57.01h-1.526v4.105h-.547v-4.105h-1.522v-.51h3.595v.51zM54.236 56.5h.811l1.57 3.618h.011l1.574-3.618h.798v4.615h-.551v-3.869h-.012l-1.653 3.869h-.333l-1.659-3.869h-.011v3.869h-.545v-4.615z"></path>
           </g>
         </svg>
+        </Link>
         <div>
           <ul>
-            <li>MENU</li>
+            <li><Link to="/starbucks-clone-react/menu">MENU</Link></li>
             <li>REWARDS</li>
             <li>GIFT CARDS</li>
             {!modeState ? (
