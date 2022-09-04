@@ -57,7 +57,7 @@ background-color:${({ theme }) => theme.backgroundColor};
 color: ${({ theme }) => theme.fontColor};
 padding-left:max(calc(15vw - 10rem), 2rem); 
 padding-right:max(calc(15vw - 10rem), 2rem);
-width: 85%;
+width: 92%;
 
 div{
     width: 100%;

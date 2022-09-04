@@ -22,7 +22,7 @@ export default function List({items , footer}) {
             {footer && <IoIosArrowDown style={{
               transform: !isOpened? 'rotate(0deg) scale(1.5)':'rotate(180deg) scale(1.5)'
           }} onClick={Handler}/>}
-            <ul>
+          <ul>
               {items.ListItems.map((item,index)=>
               <li key={index}>
                 {item}

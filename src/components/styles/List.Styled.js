@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 
 
 export const StyledList = styled.div`
 display: flex;
 align-items: flex-start;
-justify-content: center;
+justify-content: flex-start;
 flex-direction: column;
-max-height: auto;
+max-height: max-content;
 max-width: auto;
 background-color: transparent;
 color:${({ theme }) => theme.fontColor};
@@ -19,7 +19,6 @@ h3 {
     text-align: left;
     font-size: 1.4rem;
     font-weight: 500;
-    margin: 1rem 0rem;
     z-index:50;
 }
 ul {
@@ -42,6 +41,7 @@ ul li {
 }
 
 svg{
+    transition: all 300ms ease-in-out;
     position: relative;
     z-index: 20;
     display: none;
@@ -53,6 +53,7 @@ svg{
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-height: fit-content;
     svg{
         display: block;
         margin-right:1rem;
@@ -60,23 +61,44 @@ svg{
     ul{
         position: relative;
         width: 100%;
-        display: none;
-        z-index: 10;
-        transition: height 1s ease-in-out;
-        background-color: ${({ theme }) => theme.backgroundColor};
+        display: flex;
+        flex-direction: column;
+        z-index: -100;
+        transition: all 300ms ease-in-out;
+        top:-15rem;
+        max-height:0;
+        opacity:0;
+        visibility: hidden;
     }
     h3 {
+    height:2rem;
     position: relative;
     text-align: left;
     font-size: 1.2rem;
     font-weight: 500;
     margin: 1rem 0rem;
-    z-index:10;
-    background-color: ${({ theme }) => theme.backgroundColor};
+    width: 90%;
+    z-index:20;
+    background-color: ${({ theme }) => theme.body};
 }
 ul li {
     font-size: 1rem;
 }
+
+${({state})=>state && css`
+
+ul {
+    position: relative;
+    opacity: 1;
+    transform-origin: top;
+    top:0rem;
+    max-height: 50rem;
+    visibility: visible;
+
+}
+
+
+`}
     
 }
 
