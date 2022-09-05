@@ -11,9 +11,9 @@ export const ContentContainer = styled.main`
   z-index: 50;
   padding-left: max(calc(15vw - 10rem), 0rem);
   padding-right: max(calc(15vw - 10rem), 0rem);
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
 
   h1 {
     font-size: 3.5rem;
@@ -57,7 +57,6 @@ export const ContentFlex = styled.div`
     margin-left: auto;
     margin-right: auto;
   }
-
 
   ${({ Flex }) =>
     Flex &&

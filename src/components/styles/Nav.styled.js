@@ -16,18 +16,14 @@ export const Container = styled.nav`
   justify-content: space-between;
   z-index: 100;
   background-color: ${({ theme }) => theme.nav};
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
-  -moz-box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.1);
-
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
 
   @media all and (max-width: 768px) {
-
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-
   }
-
 `;
 
 export const NavStyledLeft = styled.div`
@@ -54,9 +50,9 @@ export const NavStyledLeft = styled.div`
     height: 20px;
   }
 
-  a{
+  a {
     color: ${({ theme }) => theme.fontColor};
-    &:hover{
+    &:hover {
       color: ${({ theme }) => theme.main};
     }
   }

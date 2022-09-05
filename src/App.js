@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
-import {Route,Routes} from 'react-router-dom'
+import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav";
 import GlobalStyle from "./components/styles/Global";
 import Loading from "./components/Loading";
@@ -31,7 +31,6 @@ function App() {
 
   // Loading Screen
   useEffect(() => {
-
     const delay = setTimeout(() => {
       setLoading((prev) => !prev);
     }, 800);
@@ -41,8 +40,8 @@ function App() {
 
   useEffect(() => {
     menuState
-      ? (document.body.style.cssText=`overflow: hidden;}`)
-      : (document.body.style.cssText=`overflow: scroll;`);
+      ? (document.body.style.cssText = `overflow: hidden;}`)
+      : (document.body.style.cssText = `overflow: scroll;`);
   }, [menuState]);
 
   // Caching darkMode status with every state update of darkmode
@@ -144,7 +143,7 @@ function App() {
       img: "https://content-prod-live.cert.starbucks.com/binary/v2/asset/137-79284.jpg",
       bg: "#006241",
       color: "#ffffff",
-    }
+    },
   ];
 
   return (
@@ -157,18 +156,37 @@ function App() {
         MenuHandler={menuHandler}
         MenuState={menuState}
       />
-      <SideBar darkModeHandler={modeChanger} modeState={darkMode} MenuState={menuState} />
+      <SideBar
+        darkModeHandler={modeChanger}
+        modeState={darkMode}
+        MenuState={menuState}
+      />
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay:!loading? 0:0.8, duration:0.4 }}
+        transition={{ delay: !loading ? 0 : 0.8, duration: 0.4 }}
         exit={{ opacity: 1 }}
       >
         <Routes>
-        <Route path="/starbucks-clone-react" element={<Content content={mainContent.concat(mainContent2)} loadingState={loading}/>} />
-        <Route path="/starbucks-clone-react/menu" element={<Menu/>}/>
+          <Route
+            path="/starbucks-clone-react"
+            element={
+              <Content
+                content={mainContent.concat(
+                  mainContent2[1],
+                  mainContent2[2],
+                  mainContent2[3],
+                  mainContent2[1],
+                  mainContent2[2],
+                  mainContent2[4]
+                )}
+                loadingState={loading}
+              />
+            }
+          />
+          <Route path="/starbucks-clone-react/menu" element={<Menu />} />
         </Routes>
-        <Footer/>
+        <Footer />
       </motion.div>
     </ThemeProvider>
   );

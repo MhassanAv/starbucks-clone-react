@@ -1,9 +1,12 @@
 import React from "react";
 import { Btn } from "../components/styles/Btn.Styled";
-import { ContentContainer, ContentFlex } from "../components/styles/Content.Styled";
+import {
+  ContentContainer,
+  ContentFlex,
+} from "../components/styles/Content.Styled";
 import { motion } from "framer-motion";
 
-export default function Content({ content,loadingState }) {
+export default function Content({ content, loadingState }) {
   return (
     <ContentContainer>
       {content.map((item, index) => {
@@ -19,7 +22,7 @@ export default function Content({ content,loadingState }) {
                 style={{ marign: 0, maxWidth: "max-content" }}
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: !loadingState? 0:0.8 , duration:0.3 }}
+                transition={{ delay: !loadingState ? 0 : 0.8, duration: 0.3 }}
                 exit={{ opacity: 1 }}
               >
                 <h1
@@ -30,9 +33,7 @@ export default function Content({ content,loadingState }) {
                 >
                   {item.header}
                 </h1>
-                {item.main && (
-                  <p style={{ color: item.color }}>{item.main}</p>
-                )}
+                {item.main && <p style={{ color: item.color }}>{item.main}</p>}
                 <Btn style={{ color: item.color, borderColor: item.color }}>
                   {item.buttonText}
                 </Btn>

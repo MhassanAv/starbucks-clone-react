@@ -20,7 +20,6 @@ const Load = styled.div`
 export default function Loading() {
   return (
     <Load>
-      <h4>Welcome to Starbucks</h4>
       <svg
         focusable="false"
         height="10%"
@@ -40,6 +39,9 @@ export default function Loading() {
       <AiOutlineLoading
         style={{ marginTop: "3rem", animation: "spinner 0.4s linear infinite" }}
       />
+      <h4 style={{ fontWeight: "800", marginTop: "2rem", textAlign: "center" }}>
+        Welcome to Starbucks
+      </h4>
     </Load>
   );
 }
