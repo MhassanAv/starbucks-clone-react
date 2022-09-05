@@ -4,10 +4,11 @@ import { ThemeProvider } from "styled-components";
 import {Route,Routes} from 'react-router-dom'
 import Nav from "./components/Nav";
 import GlobalStyle from "./components/styles/Global";
-import Content from "./components/Content";
 import Loading from "./components/Loading";
 import SideBar from "./components/SideBar";
 import Footer from "./components/Footer";
+import Menu from "./pages/Menu";
+import Content from "./pages/Content";
 import { motion } from "framer-motion";
 
 function App() {
@@ -164,8 +165,8 @@ function App() {
         exit={{ opacity: 1 }}
       >
         <Routes>
-        <Route path="/starbucks-clone-react" element={<Content content={mainContent2} loadingState={loading}/>} />
-        <Route path="/starbucks-clone-react/menu" element={<h1>Menu</h1>}/>
+        <Route path="/starbucks-clone-react" element={<Content content={mainContent.concat(mainContent2)} loadingState={loading}/>} />
+        <Route path="/starbucks-clone-react/menu" element={<Menu/>}/>
         </Routes>
         <Footer/>
       </motion.div>

@@ -1,6 +1,6 @@
 import React from "react";
-import { Btn } from "./styles/Btn.Styled";
-import { ContentContainer, ContentFlex } from "./styles/Content.Styled";
+import { Btn } from "../components/styles/Btn.Styled";
+import { ContentContainer, ContentFlex } from "../components/styles/Content.Styled";
 import { motion } from "framer-motion";
 
 export default function Content({ content,loadingState }) {
